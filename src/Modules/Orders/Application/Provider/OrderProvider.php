@@ -9,7 +9,7 @@ use App\Modules\Orders\Domain\Entity\Order;
 use App\Modules\Orders\Domain\Repositories\OrderQueryRepositoryInterface;
 use App\Modules\Orders\Domain\ValueObjects\OrderId;
 
-final readonly class OrderProvider
+final readonly class OrderProvider implements OrderProviderInterface
 {
     public function __construct(
         private OrderQueryRepositoryInterface $orderQueryRepository,

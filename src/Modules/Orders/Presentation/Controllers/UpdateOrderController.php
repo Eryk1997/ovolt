@@ -6,6 +6,7 @@ namespace App\Modules\Orders\Presentation\Controllers;
 
 use App\Modules\Orders\Application\Factories\UpdateOrderCommandFactory;
 use App\Modules\Orders\Application\Provider\OrderProvider;
+use App\Modules\Orders\Application\Provider\OrderProviderInterface;
 use App\Modules\Orders\Domain\ValueObjects\OrderId;
 use App\Modules\Orders\Presentation\Dtos\Request\UpdateOrder\UpdateOrderRequest;
 use App\Modules\Orders\Presentation\Dtos\Response\UpdateOrder\UpdateOrderResponse;
@@ -27,7 +28,7 @@ class UpdateOrderController extends AbstractApiController
         string                    $id,
         CommandBus                $commandBus,
         UpdateOrderCommandFactory $updateOrderCommandFactory,
-        OrderProvider $orderProvider,
+        OrderProviderInterface $orderProvider,
     ): JsonResponse
     {
         try {

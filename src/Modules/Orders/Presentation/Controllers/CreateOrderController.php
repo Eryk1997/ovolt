@@ -6,9 +6,10 @@ namespace App\Modules\Orders\Presentation\Controllers;
 
 use App\Modules\Orders\Application\Factories\CreateOrderCommandFactory;
 use App\Modules\Orders\Application\Provider\OrderProvider;
+use App\Modules\Orders\Application\Provider\OrderProviderInterface;
 use App\Modules\Orders\Domain\ValueObjects\OrderId;
 use App\Modules\Orders\Presentation\Dtos\Request\CreateOrder\CreateOrderRequest;
-use App\Modules\Orders\Presentation\Dtos\Response\CreateOrder\UpdaetOrderResponse;
+use App\Modules\Orders\Presentation\Dtos\Response\UpdateOrder\UpdateOrderResponse;
 use App\Shared\Domain\Messenger\CommandBus\CommandBus;
 use App\Shared\Presentation\Controllers\AbstractApiController;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -26,7 +27,7 @@ class CreateOrderController extends AbstractApiController
         CreateOrderRequest        $createOrderRequest,
         CommandBus                $commandBus,
         CreateOrderCommandFactory $createOrderCommandFactory,
-        OrderProvider $orderProvider,
+        OrderProviderInterface $orderProvider,
     ): JsonResponse
     {
         try {
@@ -34,7 +35,7 @@ class CreateOrderController extends AbstractApiController
             $commandBus->dispatch($createOrderCommandFactory->createFromRequest($id, $createOrderRequest));
             $order = $orderProvider->findById($id);
 
-            return $this->successData('Created', UpdaetOrderResponse::fromOrder($order));
+            return $this->successData('Created', UpdateOrderResponse::fromOrder($order));
         } catch (HandlerFailedException $exception) {
             return $this->successKnownIssueMessage($exception);
         }

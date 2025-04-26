@@ -6,6 +6,7 @@ namespace App\Modules\Orders\Application\Messenger\CommandHandlers;
 
 use App\Modules\Orders\Application\Messenger\Commands\UpdateOrder\UpdateOrderCommand;
 use App\Modules\Orders\Application\Provider\OrderProvider;
+use App\Modules\Orders\Application\Provider\OrderProviderInterface;
 use App\Modules\Orders\Domain\Enums\Status;
 use App\Modules\Orders\Domain\Repositories\OrderRepositoryInterface;
 use Symfony\Component\Messenger\Attribute\AsMessageHandler;
@@ -14,7 +15,7 @@ use Symfony\Component\Messenger\Attribute\AsMessageHandler;
 readonly class UpdateOrderCommandHandler
 {
     public function __construct(
-        private OrderProvider            $orderProvider,
+        private OrderProviderInterface   $orderProvider,
         private OrderRepositoryInterface $orderRepository,
     )
     {
