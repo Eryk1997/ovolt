@@ -4,7 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07bc845a-7c7f-4c0c-84d2-8d0a249d3976" name="Changes" comment="" />
+    <list default="true" id="07bc845a-7c7f-4c0c-84d2-8d0a249d3976" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Modules/Orders/Application/Exception/OrderStatusException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Modules/Orders/Application/Factories/UpdateOrderCommandFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Modules/Orders/Application/Messenger/CommandHandlers/UpdateOrderCommandHandler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Modules/Orders/Application/Messenger/Commands/UpdateOrder/UpdateOrderCommand.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Modules/Orders/Application/Validator/Constraints/OrderStatusValue.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Modules/Orders/Application/Validator/Constraints/OrderStatusValueValidator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Modules/Orders/Presentation/Controllers/UpdateOrderController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Modules/Orders/Presentation/Dtos/Request/UpdateOrder/UpdateOrderRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Modules/Orders/Presentation/Dtos/Response/UpdateOrder/UpdateOrderItemResponse.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Modules/Orders/Presentation/Dtos/Response/UpdateOrder/UpdateOrderResponse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Orders/Domain/Entity/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Orders/Domain/Entity/Order.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Orders/Presentation/Controllers/CreateOrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Orders/Presentation/Controllers/CreateOrderController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Orders/Presentation/Dtos/Response/CreateOrder/CreateOrderResponse.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Orders/Presentation/Dtos/Response/CreateOrder/CreateOrderResponse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/translations/exceptions.pl.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/translations/exceptions.pl.yaml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,7 +33,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature/3/addProductModule" />
+        <entry key="$PROJECT_DIR$" value="feature/4/createOrders" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -111,8 +127,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "feature/4/createOrders",
-    "last_opened_file_path": "/home/eryk/Dokumenty/ovolt/src/Modules/Orders/Application",
+    "git-widget-placeholder": "feature/5/orderDetails",
+    "last_opened_file_path": "/home/eryk/Dokumenty/ovolt/src/Modules/Orders/Presentation/Dtos/Response/UpdateOrder",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -124,11 +140,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Modules/Orders/Presentation/Dtos/Response/UpdateOrder" />
+      <recent name="$PROJECT_DIR$/src/Modules/Orders/Presentation/Dtos/Response" />
+      <recent name="$PROJECT_DIR$/src/Modules/Orders/Application/Messenger/Commands" />
       <recent name="$PROJECT_DIR$/src/Modules/Orders/Application" />
-      <recent name="$PROJECT_DIR$/translations" />
-      <recent name="$PROJECT_DIR$/src/Modules/Products/Application" />
-      <recent name="$PROJECT_DIR$/src/Shared/Presentation" />
-      <recent name="$PROJECT_DIR$/src/Shared" />
+      <recent name="$PROJECT_DIR$/src/Modules/Orders/Presentation/Dtos/Request" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/Modules/Orders/Application/Messenger" />
@@ -158,7 +174,7 @@
       <option name="presentableId" value="Default" />
       <updated>1745649305704</updated>
       <workItem from="1745649306714" duration="699000" />
-      <workItem from="1745651762356" duration="2941000" />
+      <workItem from="1745651762356" duration="4319000" />
     </task>
     <servers />
   </component>

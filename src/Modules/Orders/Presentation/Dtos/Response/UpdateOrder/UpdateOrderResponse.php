@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace App\Modules\Orders\Presentation\Dtos\Response\CreateOrder;
+namespace App\Modules\Orders\Presentation\Dtos\Response\UpdateOrder;
 
 use App\Modules\Orders\Domain\Entity\Order;
 use App\Shared\Presentation\Dtos\FrontendMoneyResponse;
 
-readonly class CreateOrderResponse
+readonly class UpdateOrderResponse
 {
     /** @param UpdateOrderItemResponse[] $items */
     public function __construct(
