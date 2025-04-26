@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace App\Modules\Orders\Presentation\Controllers;
 
-use App\Modules\Orders\Application\Factories\CreateOrderCommandFactory;
+use App\Modules\Orders\Application\Factories\UpdateOrderCommandFactory;
 use App\Modules\Orders\Application\Provider\OrderProvider;
 use App\Modules\Orders\Domain\ValueObjects\OrderId;
-use App\Modules\Orders\Presentation\Dtos\Request\CreateOrder\CreateOrderRequest;
-use App\Modules\Orders\Presentation\Dtos\Response\CreateOrder\UpdaetOrderResponse;
+use App\Modules\Orders\Presentation\Dtos\Request\UpdateOrder\UpdateOrderRequest;
+use App\Modules\Orders\Presentation\Dtos\Response\UpdateOrder\UpdateOrderResponse;
 use App\Shared\Domain\Messenger\CommandBus\CommandBus;
 use App\Shared\Presentation\Controllers\AbstractApiController;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -18,23 +18,24 @@ use Symfony\Component\Messenger\Exception\HandlerFailedException;
 use Symfony\Component\Routing\Attribute\Route;
 
 #[AsController]
-class CreateOrderController extends AbstractApiController
+class UpdateOrderController extends AbstractApiController
 {
-    #[Route('/orders', name: 'create', methods: ['POST'])]
-    public function create(
+    #[Route('/orders/{id}', name: 'update', methods: ['PATCH'])]
+    public function update(
         #[MapRequestPayload]
-        CreateOrderRequest        $createOrderRequest,
+        UpdateOrderRequest        $updateOrderRequest,
+        string                    $id,
         CommandBus                $commandBus,
-        CreateOrderCommandFactory $createOrderCommandFactory,
+        UpdateOrderCommandFactory $updateOrderCommandFactory,
         OrderProvider $orderProvider,
     ): JsonResponse
     {
         try {
-            $id = OrderId::new();
-            $commandBus->dispatch($createOrderCommandFactory->createFromRequest($id, $createOrderRequest));
+            $id = OrderId::fromString($id);
+            $commandBus->dispatch($updateOrderCommandFactory->createFromRequest($id, $updateOrderRequest));
             $order = $orderProvider->findById($id);
 
-            return $this->successData('Created', UpdaetOrderResponse::fromOrder($order));
+            return $this->successData('Updated', UpdateOrderResponse::fromOrder($order));
         } catch (HandlerFailedException $exception) {
             return $this->successKnownIssueMessage($exception);
         }

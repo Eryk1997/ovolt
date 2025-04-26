@@ -5,6 +5,8 @@ order:
       max_length: 'Maksymalna długość nazwy: %max%'
   not_found: "Nie znaleziono zamówienia."
   empty_items: "Nie można utworzyć zamówienia bez pozycji."
+  status:
+    valid_option: 'Nie ma takiego statusu jak: %status%'
 product:
   not_found_id: 'Nie znaleziono produktu z id: %id%'
   not_found_name: 'Nie znaleziono produktu z nazwą: %name%'

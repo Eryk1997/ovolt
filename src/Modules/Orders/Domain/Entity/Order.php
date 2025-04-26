@@ -107,6 +107,11 @@ class Order extends AggregateRoot
         return $this->items;
     }
 
+    public function setStatus(Status $status): void
+    {
+        $this->status = $status;
+    }
+
     private function recalculateItemsCost(): void
     {
         if ($this->items->isEmpty()) {
