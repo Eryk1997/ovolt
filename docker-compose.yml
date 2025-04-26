@@ -1,0 +1,39 @@
+services:
+  ovolt-nginx:
+    image: nginx:stable-alpine
+    depends_on:
+      - ovolt-php
+    networks:
+      - ovolt-project
+    volumes:
+      - ".docker/nginx/default.conf:/etc/nginx/conf.d/default.conf"
+      - ".:/var/www/html"
+
+  ovolt-php:
+    build:
+      context: .docker/
+    volumes:
+      - ".:/var/www/html"
+    networks:
+      - ovolt-project
+
+  ovolt-db:
+    image: mariadb:10.11.6
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ovolt
+      MYSQL_USER: ovolt
+      MYSQL_PASSWORD: ovolt
+      MYSQL_DATABASE: ovolt_db
+    volumes:
+      - dbdata:/var/lib/mysql
+    networks:
+      - ovolt-project
+
+networks:
+  ovolt-project:
+    external: true
+
+volumes:
+  dbdata: ~

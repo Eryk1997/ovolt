@@ -1,0 +1,12 @@
+services:
+  ovolt-php:
+    extra_hosts:
+      - host.docker.internal:host-gateway
+
+  ovolt-nginx:
+    ports:
+      - "127.0.0.77:80:80"
+
+  ovolt-db:
+    ports:
+      - "127.0.0.77:3306:3306"
