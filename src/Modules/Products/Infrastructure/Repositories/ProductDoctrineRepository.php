@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Modules\Products\Infrastructure\Repositories;
 
 use App\Modules\Products\Domain\Entity\Product;
@@ -33,5 +35,15 @@ class ProductDoctrineRepository extends ServiceEntityRepository implements Produ
             ->getQuery()
             ->getOneOrNullResult()
         ;
+    }
+
+    public function findById(int $id): ?Product
+    {
+        return $this->createQueryBuilder('products')
+            ->where('products.id = :id')
+            ->setParameter('id', $id)
+            ->getQuery()
+            ->getOneOrNullResult()
+            ;
     }
 }

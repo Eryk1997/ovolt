@@ -1,0 +1,10 @@
+order:
+  item:
+    price: 'Niepoprawna kwota produktu: %name%'
+    name:
+      max_length: 'Maksymalna długość nazwy: %max%'
+  not_found: "Nie znaleziono zamówienia."
+  empty_items: "Nie można utworzyć zamówienia bez pozycji."
+product:
+  not_found_id: 'Nie znaleziono produktu z id: %id%'
+  not_found_name: 'Nie znaleziono produktu z nazwą: %name%'
