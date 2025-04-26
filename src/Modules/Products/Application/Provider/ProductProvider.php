@@ -26,4 +26,15 @@ final readonly class ProductProvider
 
         return $product;
     }
+
+    public function findById(int $id): Product
+    {
+        $product = $this->productRepository->findById($id);
+
+        if (!$product) {
+            throw new NotFoundProductException("product.not_found_id", ['%id%' => $id]);
+        }
+
+        return $product;
+    }
 }
