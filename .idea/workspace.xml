@@ -4,57 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07bc845a-7c7f-4c0c-84d2-8d0a249d3976" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Modules/Orders/Application/Factories/CreateOrderCommandFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modules/Orders/Application/Factories/CreateOrderItemCommandFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modules/Orders/Application/Factories/OrderByCreateOrderCommandFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modules/Orders/Application/Messenger/CommandHandlers/CreateOrderCommandHandler.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modules/Orders/Application/Messenger/Commands/CreateOrder/CreateOrderCommand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modules/Orders/Application/Messenger/Commands/CreateOrder/CreateOrderItemCommand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modules/Orders/Application/OrderItem/Factories/OrderItemByCreateOrderItemCommandFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modules/Orders/Application/Provider/OrderProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modules/Orders/Domain/Entity/Item.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modules/Orders/Domain/Entity/Order.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modules/Orders/Domain/Enums/Status.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modules/Orders/Domain/Exception/OrderException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modules/Orders/Domain/Exception/OrderItemException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modules/Orders/Domain/Repositories/OrderQueryRepositoryInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modules/Orders/Domain/Repositories/OrderRepositoryInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modules/Orders/Domain/ValueObjects/ItemId.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modules/Orders/Domain/ValueObjects/Name.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modules/Orders/Domain/ValueObjects/OrderId.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modules/Orders/Infrastructure/Repositories/OrderDoctrineQueryRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modules/Orders/Infrastructure/Repositories/OrderDoctrineRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modules/Orders/Presentation/Controllers/CreateOrderController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modules/Orders/Presentation/Dtos/Request/CreateOrder/CreateOrderItemRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modules/Orders/Presentation/Dtos/Request/CreateOrder/CreateOrderRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modules/Orders/Presentation/Dtos/Response/CreateOrder/CreateOrderItemResponse.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modules/Orders/Presentation/Dtos/Response/CreateOrder/CreateOrderResponse.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modules/Products/Application/Validator/Constraints/ProductExists.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modules/Products/Application/Validator/Constraints/ProductExistsValidator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Shared/Application/MoneyTransformer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Shared/Application/Validation/EventListener/ValidationFailedSubscriber.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Shared/Domain/AggregateRootId.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Shared/Presentation/Controllers/AbstractApiController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Shared/Presentation/Dtos/FrontendMoneyResponse.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/translations/exceptions.pl.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeception.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeception.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ovolt.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ovolt.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/phpspec.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpspec.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/doctrine.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/doctrine.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/Products/Application/Provider/ProductProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Products/Application/Provider/ProductProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/Products/Domain/Entity/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Products/Domain/Entity/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/Products/Domain/Repositories/ProductRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Products/Domain/Repositories/ProductRepositoryInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/Products/Infrastructure/Repositories/ProductDoctrineRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Products/Infrastructure/Repositories/ProductDoctrineRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-    </list>
+    <list default="true" id="07bc845a-7c7f-4c0c-84d2-8d0a249d3976" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -162,7 +112,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "feature/4/createOrders",
-    "last_opened_file_path": "/home/eryk/Dokumenty/ovolt/translations",
+    "last_opened_file_path": "/home/eryk/Dokumenty/ovolt/src/Modules/Orders/Application",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -174,11 +124,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Modules/Orders/Application" />
       <recent name="$PROJECT_DIR$/translations" />
       <recent name="$PROJECT_DIR$/src/Modules/Products/Application" />
       <recent name="$PROJECT_DIR$/src/Shared/Presentation" />
       <recent name="$PROJECT_DIR$/src/Shared" />
-      <recent name="$PROJECT_DIR$/src/Modules/Orders/Application" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/Modules/Orders/Application/Messenger" />
@@ -208,7 +158,7 @@
       <option name="presentableId" value="Default" />
       <updated>1745649305704</updated>
       <workItem from="1745649306714" duration="699000" />
-      <workItem from="1745651762356" duration="2623000" />
+      <workItem from="1745651762356" duration="2941000" />
     </task>
     <servers />
   </component>
