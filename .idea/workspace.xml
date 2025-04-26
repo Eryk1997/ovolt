@@ -5,21 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07bc845a-7c7f-4c0c-84d2-8d0a249d3976" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Modules/Orders/Application/Exception/OrderStatusException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modules/Orders/Application/Factories/UpdateOrderCommandFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modules/Orders/Application/Messenger/CommandHandlers/UpdateOrderCommandHandler.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modules/Orders/Application/Messenger/Commands/UpdateOrder/UpdateOrderCommand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modules/Orders/Application/Validator/Constraints/OrderStatusValue.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modules/Orders/Application/Validator/Constraints/OrderStatusValueValidator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modules/Orders/Presentation/Controllers/UpdateOrderController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modules/Orders/Presentation/Dtos/Request/UpdateOrder/UpdateOrderRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modules/Orders/Presentation/Dtos/Response/UpdateOrder/UpdateOrderItemResponse.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modules/Orders/Presentation/Dtos/Response/UpdateOrder/UpdateOrderResponse.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Modules/Orders/Application/Provider/OrderProviderInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Modules/Orders/Application/Messenger/CommandHandlers/UpdateOrderCommandHandlerTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeception.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeception.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ovolt.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ovolt.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/phpspec.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpspec.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/Orders/Domain/Entity/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Orders/Domain/Entity/Order.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Orders/Application/Messenger/CommandHandlers/UpdateOrderCommandHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Orders/Application/Messenger/CommandHandlers/UpdateOrderCommandHandler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Orders/Application/Messenger/QueryHandlers/GetOrderDetailQueryHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Orders/Application/Messenger/QueryHandlers/GetOrderDetailQueryHandler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Orders/Application/Provider/OrderProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Orders/Application/Provider/OrderProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Modules/Orders/Presentation/Controllers/CreateOrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Orders/Presentation/Controllers/CreateOrderController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/Orders/Presentation/Dtos/Response/CreateOrder/CreateOrderResponse.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Orders/Presentation/Dtos/Response/CreateOrder/CreateOrderResponse.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/translations/exceptions.pl.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/translations/exceptions.pl.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Orders/Presentation/Controllers/UpdateOrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Orders/Presentation/Controllers/UpdateOrderController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +34,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature/4/createOrders" />
+        <entry key="$PROJECT_DIR$" value="feature/6/updateStatus" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -114,6 +115,30 @@
       <path value="$PROJECT_DIR$/vendor/symfony/translation" />
       <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
       <path value="$PROJECT_DIR$/vendor/symfony/validator" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/vendor/staabm/side-effects-detector" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/lines-of-code" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/complexity" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/cli-parser" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-invoker" />
     </include_path>
   </component>
   <component name="ProjectColorInfo">{
@@ -127,7 +152,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "feature/5/orderDetails",
+    "git-widget-placeholder": "feature/7/addTest",
     "last_opened_file_path": "/home/eryk/Dokumenty/ovolt/src/Modules/Orders/Presentation/Dtos/Response/UpdateOrder",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -174,7 +199,7 @@
       <option name="presentableId" value="Default" />
       <updated>1745649305704</updated>
       <workItem from="1745649306714" duration="699000" />
-      <workItem from="1745651762356" duration="4319000" />
+      <workItem from="1745651762356" duration="5288000" />
     </task>
     <servers />
   </component>
